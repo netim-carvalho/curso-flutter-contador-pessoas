@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
-
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -77,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                 "$count",
                 style:  TextStyle(
                   fontSize: 100,
-                  color: isFull ? Colors.red : Colors.green,
+                  color: isFull ? Colors.red : Colors.white,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -96,7 +95,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   onPressed: isEmpty ? null : decremente,
                   child: const Text(
-                    "Saiu",
+                    "SAIU",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 16,
