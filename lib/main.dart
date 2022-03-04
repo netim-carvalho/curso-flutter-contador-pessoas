@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              isFull ? "Lotado" : "Pode Entrar",
+              isFull ? "Lotado!" : "Pode Entrar",
               style: const TextStyle(
                 fontSize: 26,
                 color: Colors.white,
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                 "$count",
                 style:  TextStyle(
                   fontSize: 100,
-                  color: isFull ? Colors.red : Colors.white,
+                  color: isFull ? Colors.red : Colors.green,
                   fontWeight: FontWeight.w700,
                 ),
               ),
