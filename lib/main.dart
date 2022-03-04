@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(
-        title: Text("Ola Mundo"),
+        title: Text("CONTADOR DE PESSOAS"),
       ),
       body: Container(
         decoration: const BoxDecoration(
