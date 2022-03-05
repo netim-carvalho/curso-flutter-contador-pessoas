@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -31,14 +32,12 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       count--;
     });
-    print(count);
   }
 
   void incremente() {
     setState(() {
       count++;
     });
-    print(count);
   }
 
   bool get isEmpty => count == 0;
@@ -62,6 +61,17 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            AlertDialog(
+                title: Text("Quantidade De Pessoas Permitidas ?"),
+                actions: [
+                  TextField(
+                    enabled: true,
+                  ),
+                  TextButton(
+                    onPressed: null,
+                    child: Text("OK"),
+                  )
+                ]),
             Text(
               isFull ? "Lotado!" : "Pode Entrar",
               style: const TextStyle(
@@ -74,7 +84,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(32),
               child: Text(
                 "$count",
-                style:  TextStyle(
+                style: TextStyle(
                   fontSize: 100,
                   color: isFull ? Colors.red : Colors.white,
                   fontWeight: FontWeight.w700,
